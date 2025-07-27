@@ -1,0 +1,17 @@
+# Build artifacts
+target/
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDE
+.idea/
+*.iml
+*.iws
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

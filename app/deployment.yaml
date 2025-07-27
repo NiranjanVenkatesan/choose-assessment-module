@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: choose-assessment-module
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: choose-assessment-module
+  template:
+    metadata:
+      labels:
+        app: choose-assessment-module
+    spec:
+      containers:
+      - name: choose-assessment-module
+        image: choose-assessment-module:latest
+        ports:
+        - containerPort: 8080

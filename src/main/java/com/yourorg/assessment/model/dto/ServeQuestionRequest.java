@@ -1,4 +1,4 @@
-package com.edtech.chooseassessment;
+package com.yourorg.assessment.model.dto;
 
 public class ServeQuestionRequest {
 

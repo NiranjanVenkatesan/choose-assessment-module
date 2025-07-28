@@ -1,7 +1,10 @@
 package com.yourorg.assessment.controller;
 
 import com.yourorg.assessment.model.dto.ServeQuestionRequest;
+import com.yourorg.assessment.model.dto.ServeQuestionResponse;
+import com.yourorg.assessment.model.dto.SessionStatusResponse;
 import com.yourorg.assessment.model.dto.StartSessionRequest;
+import com.yourorg.assessment.model.dto.StartSessionResponse;
 import com.yourorg.assessment.service.AssessmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,18 +26,18 @@ public class AssessmentController {
     }
 
     @PostMapping("/start-session")
-    public void startSession(@RequestBody StartSessionRequest request) {
-        assessmentService.startSession(request);
+    public StartSessionResponse startSession(@RequestBody StartSessionRequest request) {
+        return assessmentService.startSession(request);
     }
 
     @PostMapping("/serve-question")
-    public void serveQuestion(@RequestBody ServeQuestionRequest request) {
-        assessmentService.serveQuestion(request);
+    public ServeQuestionResponse serveQuestion(@RequestBody ServeQuestionRequest request) {
+        return assessmentService.serveQuestion(request);
     }
 
     @GetMapping("/session-status")
-    public void getSessionStatus(@RequestParam String session_id) {
-        assessmentService.getSessionStatus(session_id);
+    public SessionStatusResponse getSessionStatus(@RequestParam String session_id) {
+        return assessmentService.getSessionStatus(session_id);
     }
 
 }

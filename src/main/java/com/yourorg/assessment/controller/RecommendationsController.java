@@ -1,5 +1,6 @@
 package com.yourorg.assessment.controller;
 
+import com.yourorg.assessment.model.dto.RecommendationResponse;
 import com.yourorg.assessment.service.RecommendationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +22,8 @@ public class RecommendationsController {
     }
 
     @GetMapping
-    public void getRecommendations(@RequestParam UUID student_uuid) {
-        recommendationService.getRecommendations(student_uuid);
+    public RecommendationResponse getRecommendations(@RequestParam UUID student_uuid) {
+        return recommendationService.getRecommendations(student_uuid);
     }
 
 }

@@ -11,5 +11,43 @@ public class StartSessionRequest {
     private List<String> tags;
     private Integer numQuestions;
 
-    // Getters and setters
+    public UUID getStudentUuid() {
+        return studentUuid;
+    }
+
+    public void setStudentUuid(UUID studentUuid) {
+        this.studentUuid = studentUuid;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getChapter() {
+        return chapter;
+    }
+
+    public void setChapter(String chapter) {
+        this.chapter = chapter;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+    public Integer getNumQuestions() {
+        return numQuestions;
+    }
+
+    public void setNumQuestions(Integer numQuestions) {
+        this.numQuestions = numQuestions;
+    }
 }

@@ -6,5 +6,11 @@ public class RecommendationResponse {
 
     private List<Object> studyTips; // Define a proper StudyTip DTO
 
-    // Getters and setters
+    public List<Object> getStudyTips() {
+        return studyTips;
+    }
+
+    public void setStudyTips(List<Object> studyTips) {
+        this.studyTips = studyTips;
+    }
 }

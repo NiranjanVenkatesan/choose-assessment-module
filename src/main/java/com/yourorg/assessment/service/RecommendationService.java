@@ -1,7 +1,9 @@
 package com.yourorg.assessment.service;
 
+import com.yourorg.assessment.model.dto.RecommendationResponse;
+
 import java.util.UUID;
 
 public interface RecommendationService {
-    void getRecommendations(UUID studentUuid);
+    RecommendationResponse getRecommendations(UUID studentUuid);
 }

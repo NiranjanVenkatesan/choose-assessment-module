@@ -1,21 +1,11 @@
-package com.edtech.chooseassessment;
+package com.yourorg.assessment.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Entity
-@Table(name = "responses")
-public class ResponseEntity {
+public class Response {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private UUID studentUuid;
     private String sessionId;
     private Long questionId;

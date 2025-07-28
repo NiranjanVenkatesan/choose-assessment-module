@@ -1,4 +1,4 @@
-package com.edtech.chooseassessment;
+package com.yourorg.assessment.model.dto;
 
 import java.util.List;
 import java.util.UUID;

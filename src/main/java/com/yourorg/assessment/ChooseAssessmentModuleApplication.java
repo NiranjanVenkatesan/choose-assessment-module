@@ -1,4 +1,4 @@
-package com.edtech.chooseassessment;
+package com.yourorg.assessment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

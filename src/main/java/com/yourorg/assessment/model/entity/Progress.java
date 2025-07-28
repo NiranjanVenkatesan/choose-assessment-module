@@ -1,4 +1,4 @@
-package com.edtech.chooseassessment;
+package com.yourorg.assessment.model.entity;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

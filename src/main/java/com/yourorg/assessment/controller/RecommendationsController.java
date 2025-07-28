@@ -1,5 +1,6 @@
-package com.edtech.chooseassessment;
+package com.yourorg.assessment.controller;
 
+import com.yourorg.assessment.service.RecommendationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,16 +13,16 @@ import java.util.UUID;
 @RequestMapping("/recommendations")
 public class RecommendationsController {
 
-    private final RecommendationsService recommendationsService;
+    private final RecommendationService recommendationService;
 
     @Autowired
-    public RecommendationsController(RecommendationsService recommendationsService) {
-        this.recommendationsService = recommendationsService;
+    public RecommendationsController(RecommendationService recommendationService) {
+        this.recommendationService = recommendationService;
     }
 
     @GetMapping
     public void getRecommendations(@RequestParam UUID student_uuid) {
-        recommendationsService.getRecommendations(student_uuid);
+        recommendationService.getRecommendations(student_uuid);
     }
 
 }
